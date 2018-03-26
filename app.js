@@ -2,7 +2,6 @@ function onReady() {
    const addToDoForm = document.getElementById('addToDoForm');
    const newToDoText = document.getElementById('newToDoText');
    const toDoList = document.getElementById('toDoList');
-   addToDoForm.addEventListener();
    addToDoForm.addEventListener('submit', () => {
    event.preventDefault();
    let title = newToDoText.value;
@@ -15,12 +14,12 @@ function onReady() {
    newToDoText.value = '';
    var btn = document.createElement("button")
    function myFunction() {
-     Var btn = document.createElement("button");
+     var btn = document.createElement("button");
        document.body.appendChild(btn);
      }
-   }
-     });
-}
+   })
+     };
+
 
 window.onload = function() {
    alert("The window has loaded!");
