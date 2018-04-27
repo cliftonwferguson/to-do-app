@@ -1,14 +1,17 @@
 
+let work = 0
+
 function onReady() {
   let toDos = [];
-  const addToDoForm = document.getElementByiD('addToDoForm');
-  const newToDoText = document.getElementById('newToDoText');
-  const toDolist = document.getElementById('toDoList');
+  const addToDoForm = document.getElementByid('addToDoForm');
+  const newToDoText = document.getElementByid('newToDoText');
+  const toDolist = document.getElementByid('toDoList');
   function createNewToDo() {
     if (!newTodotext.value) {return; }
     toDos.push({
       title: newToDoText.value,
-      complete: false
+      complete: false,
+      var x = document.getElementByid("work");
       });
       newToDoText.value = "";
 
