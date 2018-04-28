@@ -1,8 +1,10 @@
 
-let work = 0
+
+let toDos = [];
 
 function onReady() {
-  let toDos = [];
+
+  let id = 0;
   const addToDoForm = document.getElementByid('addToDoForm');
   const newToDoText = document.getElementByid('newToDoText');
   const toDolist = document.getElementByid('toDoList');
@@ -11,7 +13,7 @@ function onReady() {
     toDos.push({
       title: newToDoText.value,
       complete: false,
-      var x = document.getElementByid("work"+);
+      id: id+;
       });
       newToDoText.value = "";
 
