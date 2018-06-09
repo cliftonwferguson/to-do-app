@@ -1,60 +1,48 @@
 
-
-let toDos = [];
-
 function onReady() {
-
-   console.log("ready");
-  let id = 0;
+  let toDos = [];
   const addToDoForm = document.getElementById('addToDoForm');
   const newToDoText = document.getElementById('newToDoText');
-  const toDolist = document.getElementById('toDoList');
-  function createNewToDo() {
-    if (!newToDoText.value) {return; }
-    toDos.push({
-      title: newToDoText.value,
-      complete: false,
-      id: id++})
-    newToDoText.value = "";
+  const toDoList = document.getElementById('toDoList');
 
+  renderTheUI();
+
+}
+
+function createNewToDo() {
+  if (!newToDoText.value) {return; }
+  toDos.push({
+    title: newToDoText.value,
+    complete: false
+  });
+  renderTheUI();
+}
+  function renderTheUI(){
+    const toDoList = document.getElementById('toDoList');
+     toDoList.textContent = '';
+      toDos.forEach(function(toDo) {
+        const newToDo = document.createElement('li');
+        const checkbox = document.createElement('input');
+          checkbox.type = "checkbox";
+      newToDo.textContent = toDo.title;
+      toDoList.appendchild(newToDo);
+      newToDo.appendChild(checkbox);
+    });
   }
 
-  addToDoForm.addEventListener('submit', event => {
-    event.preventDefault();
-    createNewToDo();
-    newToDoText.value = '';
+ addTodoForm.addEventListener('submit', event => {
+   event.preventDefault();
+   createNewToDo();
+   newToDoText.value = "";
+ });
 
-  });
-  function renderTheUI() {
-    const toDoList = document.getElementById('toDoList');
+  renderTheUI(); {
 
-    toDos.forEach(function(toDo) {
-      const newToDo = document.createElement('li');
-      const checkbox = document.createElement('input');
-      const button = document.createElement('button');
-      checkbox.type = 'check';
-      button.onclick = fuction ();
-      newToDo.textcontent = toDo.title;
-      newToDoText.appendChild(newToDo);
-      newToDoText.appendChild(checkbox);
-      newToDo.appendChild(deleteButton);
-      deleteButton.addEventListener('click', () => {
-          myFunction(newLi);
-       console.log("2ready");
-    });
-      renderTheUI();
-})
-}
-
-
-
+  };
 
 window.onload = function () {
+  console.log('hello');
     alert("The window has loaded!");
     onReady();
-};
 
-function myFunction(li) {
-   let ul = document.getElementsByTagName("ul")[0];
-    ul.removeChild(li);
-}
+};
