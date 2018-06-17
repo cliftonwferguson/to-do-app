@@ -33,9 +33,13 @@ function onReady() {
           toDoList.appendChild(newToDo);
           newToDo.appendChild(checkbox);
           newToDo.appendChild(deleteButton);
+          deleteButton.addEventListener('click', event => {
+            console.log('deleteEvent');
+          })
       });
 
     addToDoForm.addEventListener('submit', event => {
+      console.log("1hello");
       event.preventDefault();
       createNewToDo();
       newToDoText.value = "";
@@ -46,6 +50,10 @@ function onReady() {
   renderTheUI();
 }
 
+ function deleteTodos(id) {
+
+
+ }
 
   window.onload = function () {
   console.log('hello');
