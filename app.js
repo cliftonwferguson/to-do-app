@@ -51,7 +51,7 @@ function onReady() {
 }
 
  function deleteTodos(id) {
-
+   const
 
  }
 
