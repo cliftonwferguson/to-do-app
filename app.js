@@ -36,7 +36,15 @@ function onReady() {
           deleteButton.addEventListener('click', event => {
             console.log('deleteEvent');
           })
-      });
+          function check() {
+            document.getElementById("input").checked = true;
+            }
+
+          function uncheck() {
+            document.getElementById("input").checked = false;
+            }
+
+          });
 
     addToDoForm.addEventListener('submit', event => {
       console.log("1hello");
@@ -51,7 +59,7 @@ function onReady() {
 }
 
  function deleteTodos(id) {
-   const
+
 
  }
 
