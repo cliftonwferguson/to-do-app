@@ -34,15 +34,8 @@ function onReady() {
           newToDo.appendChild(checkbox);
           newToDo.appendChild(deleteButton);
           deleteButton.addEventListener('click', event => {
-            console.log('deleteEvent');
+            console.log(newToDo);
           })
-          function check() {
-            document.getElementById("input").checked = true;
-            }
-
-          function uncheck() {
-            document.getElementById("input").checked = false;
-            }
 
           });
 
