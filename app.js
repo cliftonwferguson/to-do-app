@@ -9,9 +9,8 @@ function onReady() {
     renderTheUI();
 
     function deleteTodos(id) {
-      toDos.filter(todo => todo.id !== id);
-      renderTheUI();
-    }
+      return toDos.filter(todo => todo.id !== id);
+        }
 
 
     function createNewToDo() {
@@ -43,9 +42,9 @@ function onReady() {
             toDoList.appendChild(newToDo);
             newToDo.appendChild(checkbox);
             newToDo.appendChild(deleteButton);
-            deleteButton.addEventListener('click', event => {
-                deleteTodos(newToDo.id);
-
+            deleteButton.addEventListener('click', () => {
+                toDos = deleteTodos(toDo.id);
+             renderTheUI();
             })
 
         });
